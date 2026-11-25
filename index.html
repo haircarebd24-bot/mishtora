@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মিষ্টোরা (Mishtora) | ঐতিহ্যের স্বাদ, আভিজাত্যের ছোঁয়া — ঢাকার সেরা মিষ্টি</title>
+  <meta name="description" content="উত্তর বাড্ডা, ঢাকায় অবস্থিত মিষ্টোরা — ঐতিহ্যের স্বাদ ও আভিজাত্যের ছোঁয়ায় প্রতিদিন তাজা রসগোল্লা, মিষ্টি দই, রসমালাই, ছানার পায়েস ও কালোজাম।">
+  <meta property="og:title" content="মিষ্টোরা (Mishtora) — ঢাকার সেরা মিষ্টির স্বাদ">
+  <meta property="og:description" content="ঐতিহ্যের স্বাদ, আভিজাত্যের ছোঁয়া। প্রতিদিন সকাল ৮টা থেকে তাজা মিষ্টি ও ঢাকার মধ্যে ডেলিভারি।">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Inter:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #6B1E3A;
+      --gold: #C9A84C;
+      --gold-light: #E8C56A;
+      --cream: #FDF6EC;
+      --plum: #1C0B14;
+      --offwhite: #FFFAF5;
+      --rose: #F5D5C0;
+      --wa-green: #25D366;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', 'Inter', sans-serif;
+      color: var(--plum);
+      background-color: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-pad {
+      padding: 64px 0;
+    }
+
+    /* Logo Component (Text-based placeholder; replace with /assets/logo.png when ready) */
+    .brand-logo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      text-align: center;
+      gap: 2px;
+    }
+
+    .brand-logo__crown {
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    .brand-logo__m {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+    }
+
+    .brand-logo__en {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      color: #FFFFFF;
+      margin-top: 2px;
+    }
+
+    .brand-logo__bn {
+      font-family: 'Hind Siliguri', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      color: var(--gold);
+    }
+
+    /* SECTION 1 — STICKY NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--burgundy);
+      border-bottom: 2px solid var(--gold);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 6px 24px rgba(28, 11, 20, 0.35);
+    }
+
+    .navbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 16px;
+    }
+
+    .navbar__right {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold-light);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--gold-light);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .btn-nav-order {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gold-light);
+      color: var(--plum);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-order:hover {
+      background-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(232, 197, 106, 0.35);
+    }
+
+    .hamburger {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(201, 168, 76, 0.45);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--gold-light);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: var(--plum);
+      border-top: 1px solid rgba(201, 168, 76, 0.3);
+      padding: 16px 20px 24px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: var(--cream);
+      font-weight: 600;
+      padding: 8px 4px;
+      border-bottom: 1px solid rgba(245, 213, 192, 0.12);
+    }
+
+    .mobile-menu .btn-nav-order {
+      width: 100%;
+    }
+
+    /* SECTION 2 — HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #6B1E3A 0%, #1C0B14 100%);
+      overflow: hidden;
+      padding: 60px 20px 80px;
+    }
+
+    .hero__particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--gold-light) 0%, rgba(201, 168, 76, 0) 70%);
+      opacity: 0.55;
+      animation: floatParticle 12s ease-in-out infinite;
+    }
+
+    .particle:nth-child(1) { width: 10px; height: 10px; top: 18%; left: 12%; animation-duration: 11s; }
+    .particle:nth-child(2) { width: 14px; height: 14px; top: 28%; right: 14%; animation-duration: 14s; animation-delay: -3s; }
+    .particle:nth-child(3) { width: 8px; height: 8px; bottom: 26%; left: 20%; animation-duration: 10s; animation-delay: -5s; }
+    .particle:nth-child(4) { width: 12px; height: 12px; top: 62%; right: 22%; animation-duration: 15s; animation-delay: -2s; }
+    .particle:nth-child(5) { width: 7px; height: 7px; top: 14%; left: 52%; animation-duration: 13s; animation-delay: -7s; }
+    .particle:nth-child(6) { width: 11px; height: 11px; bottom: 18%; right: 44%; animation-duration: 16s; animation-delay: -4s; }
+
+    @keyframes floatParticle {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.35; }
+      50% { transform: translate3d(18px, -28px, 0) scale(1.25); opacity: 0.85; }
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero__line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin: 0 auto 24px;
+      border-radius: 2px;
+    }
+
+    .hero__title {
+      font-family: 'Playfair Display', 'Hind Siliguri', serif;
+      font-weight: 700;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 20px rgba(28, 11, 20, 0.45);
+    }
+
+    .hero__subtitle {
+      color: var(--cream);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      margin-bottom: 34px;
+      opacity: 0.95;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--gold-light);
+      color: var(--plum);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 30px;
+      border-radius: 999px;
+      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(232, 197, 106, 0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--cream);
+      border: 2px solid var(--gold);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 12px 28px;
+      border-radius: 999px;
+      transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--gold);
+      color: var(--plum);
+      transform: translateY(-3px);
+    }
+
+    .hero__wa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(253, 246, 236, 0.1);
+      border: 1px solid rgba(201, 168, 76, 0.5);
+      color: var(--cream);
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .hero__wa-badge:hover {
+      background-color: rgba(232, 197, 106, 0.18);
+      border-color: var(--gold-light);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--gold-light);
+      font-size: 1.6rem;
+      animation: bounceDown 2s infinite;
+      z-index: 2;
+      padding: 6px 12px;
+    }
+
+    @keyframes bounceDown {
+      0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+      40% { transform: translate(-50%, 8px); }
+      60% { transform: translate(-50%, 4px); }
+    }
+
+    /* SECTION 3 — MARQUEE ANNOUNCEMENT BAR */
+    .marquee-bar {
+      background-color: var(--gold);
+      color: var(--plum);
+      overflow: hidden;
+      padding: 12px 0;
+      border-top: 1px solid var(--gold-light);
+      border-bottom: 1px solid var(--burgundy);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+    }
+
+    .marquee-bar:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding-right: 48px;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* SECTION 4 — PRODUCTS */
+    .products {
+      background-color: var(--cream);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', 'Hind Siliguri', serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--burgundy);
+      display: inline-block;
+      position: relative;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px;
+    }
+
+    .section-subtext {
+      color: var(--plum);
+      opacity: 0.85;
+      font-size: 1.05rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .product-card {
+      background-color: var(--offwhite);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-light);
+      box-shadow: 0 12px 28px rgba(201, 168, 76, 0.25);
+    }
+
+    .product-card__icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background-color: var(--cream);
+      border: 1px solid var(--rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin-bottom: 18px;
+    }
+
+    .product-card__title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      margin-bottom: 8px;
+    }
+
+    .product-card__desc {
+      color: var(--plum);
+      opacity: 0.88;
+      font-size: 0.98rem;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .product-card__price {
+      font-weight: 700;
+      font-size: 1.08rem;
+      color: var(--burgundy);
+      background-color: var(--rose);
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .btn-card-order {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--burgundy);
+      color: var(--gold-light);
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 11px 20px;
+      border-radius: 8px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .btn-card-order:hover {
+      background-color: var(--plum);
+      color: var(--gold);
+    }
+
+    /* SECTION 5 — ABOUT / আমাদের গল্প */
+    .about {
+      background-color: var(--burgundy);
+      color: var(--cream);
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about__label {
+      display: inline-block;
+      color: var(--gold-light);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .about__heading {
+      color: #FFFFFF;
+      font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 18px;
+    }
+
+    .about__text {
+      color: var(--cream);
+      font-size: 1.04rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+      opacity: 0.95;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .stat-badge {
+      background-color: rgba(28, 11, 20, 0.35);
+      border: 1px solid rgba(201, 168, 76, 0.45);
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .stat-badge__num {
+      display: block;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .stat-badge__label {
+      font-size: 0.88rem;
+      color: var(--cream);
+    }
+
+    .about__quote-box {
+      position: relative;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 42px 28px;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(28, 11, 20, 0.45), rgba(107, 30, 58, 0.3));
+    }
+
+    .ornament-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto;
+      width: 140px;
+    }
+
+    .ornament-line::before,
+    .ornament-line::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: var(--gold);
+    }
+
+    .ornament-diamond {
+      width: 8px;
+      height: 8px;
+      background-color: var(--gold-light);
+      transform: rotate(45deg);
+    }
+
+    .about__quote {
+      font-family: 'Playfair Display', 'Hind Siliguri', serif;
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.5;
+      margin: 24px 0;
+    }
+
+    /* SECTION 6 — WHY MISHTORA */
+    .features {
+      background-color: var(--offwhite);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .feature-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--rose);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .feature-card:hover {
+      background-color: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    .feature-card__icon {
+      flex-shrink: 0;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: var(--gold);
+      color: var(--plum);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+
+    .feature-card__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      margin-bottom: 6px;
+    }
+
+    .feature-card__desc {
+      color: var(--plum);
+      opacity: 0.88;
+      font-size: 0.96rem;
+    }
+
+    /* SECTION 7 — ORDER / CONTACT */
+    .order-cta {
+      background: linear-gradient(135deg, #6B1E3A 0%, #1C0B14 100%);
+      text-align: center;
+      color: var(--cream);
+    }
+
+    .order-cta__heading {
+      font-family: 'Playfair Display', 'Hind Siliguri', serif;
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .order-cta__subtext {
+      color: var(--cream);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .order-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .btn-whatsapp-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 1.08rem;
+      padding: 15px 30px;
+      border-radius: 999px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-whatsapp-lg:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-location-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+      color: var(--gold-light);
+      border: 2px solid var(--gold);
+      font-weight: 700;
+      font-size: 1.08rem;
+      padding: 13px 28px;
+      border-radius: 999px;
+      transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .btn-location-lg:hover {
+      background-color: var(--gold);
+      color: var(--plum);
+      transform: translateY(-3px);
+    }
+
+    .order-cta__info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 1rem;
+      color: var(--cream);
+    }
+
+    /* SECTION 8 — FOOTER */
+    .footer {
+      background-color: var(--plum);
+      color: var(--cream);
+      border-top: 1px solid var(--gold);
+      padding: 52px 0 24px;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .footer__tagline {
+      color: var(--rose);
+      font-size: 0.95rem;
+      margin: 14px 0 18px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 168, 76, 0.55);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--gold);
+      color: var(--plum);
+    }
+
+    .footer__title {
+      color: var(--gold-light);
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer__links a {
+      color: var(--cream);
+      opacity: 0.88;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .footer__links a:hover {
+      color: var(--gold-light);
+      opacity: 1;
+    }
+
+    .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.96rem;
+      color: var(--cream);
+      opacity: 0.9;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(201, 168, 76, 0.25);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--rose);
+    }
+
+    /* FLOATING ELEMENTS */
+    .fab-stack {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 950;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .back-to-top {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-color: var(--burgundy);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(28, 11, 20, 0.35);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.25s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--plum);
+    }
+
+    .wa-fab-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .wa-fab-tooltip {
+      position: absolute;
+      right: 68px;
+      background-color: var(--plum);
+      color: var(--cream);
+      border: 1px solid var(--gold);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(6px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .wa-fab-wrap:hover .wa-fab-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .wa-fab {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+      transition: transform 0.25s ease;
+    }
+
+    .wa-fab:hover {
+      transform: scale(1.06);
+    }
+
+    .wa-fab::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid var(--wa-green);
+      animation: waPulse 2s ease-out infinite;
+    }
+
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.75; }
+      100% { transform: scale(1.45); opacity: 0; }
+    }
+
+    /* Fade-in on Scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile-First Responsive Breakpoints: 480px, 768px, 1024px */
+    @media (min-width: 480px) {
+      .stats-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section-pad {
+        padding: 84px 0;
+      }
+
+      .hamburger,
+      .mobile-menu {
+        display: none !important;
+      }
+
+      .navbar__right {
+        display: flex;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer__grid {
+        grid-template-columns: 1.3fr 1fr 1.2fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about__grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1 — STICKY NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <!-- Placeholder Logo (/assets/logo.png) -->
+      <a href="#home" class="brand-logo" aria-label="মিষ্টোরা হোম">
+        <span class="brand-logo__crown" aria-hidden="true">👑</span>
+        <span class="brand-logo__m">M</span>
+        <span class="brand-logo__en">MISHTORA</span>
+        <span class="brand-logo__bn">মিষ্টোরা</span>
+      </a>
+
+      <div class="navbar__right">
+        <nav aria-label="প্রধান নেভিগেশন">
+          <ul class="nav-links">
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#products">পণ্যসমূহ</a></li>
+            <li><a href="#about">আমাদের গল্প</a></li>
+            <li><a href="#contact">যোগাযোগ</a></li>
+          </ul>
+        </nav>
+        <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-nav-order">অর্ডার করুন</a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home" class="mobile-link">হোম</a></li>
+        <li><a href="#products" class="mobile-link">পণ্যসমূহ</a></li>
+        <li><a href="#about" class="mobile-link">আমাদের গল্প</a></li>
+        <li><a href="#contact" class="mobile-link">যোগাযোগ</a></li>
+      </ul>
+      <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-nav-order">অর্ডার করুন</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 2 — HERO -->
+    <section class="hero" id="home">
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__line" aria-hidden="true"></div>
+        <h1 class="hero__title">ঢাকার সেরা মিষ্টির স্বাদ</h1>
+        <p class="hero__subtitle">ঐতিহ্যের স্বাদ, আভিজাত্যের ছোঁয়া</p>
+
+        <div class="hero__actions">
+          <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-primary">অর্ডার করুন</a>
+          <a href="#products" class="btn-secondary">পণ্য দেখুন</a>
+        </div>
+
+        <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="hero__wa-badge">
+          📱 WhatsApp এ অর্ডার করুন
+        </a>
+      </div>
+
+      <a href="#products" class="scroll-indicator" aria-label="নিচে স্ক্রল করুন">↓</a>
+    </section>
+
+    <!-- SECTION 3 — MARQUEE ANNOUNCEMENT BAR -->
+    <div class="marquee-bar" role="region" aria-label="ঘোষণা">
+      <div class="marquee-track">
+        <span class="marquee-item">🍬 তাজা মিষ্টি প্রতিদিন সকাল ৮টা থেকে &nbsp;|&nbsp; 🚚 ঢাকার মধ্যে ডেলিভারি দেওয়া হয় &nbsp;|&nbsp; 📦 অর্ডার করুন: WhatsApp @Mishtora24BD &nbsp;|&nbsp; ⭐ বিয়ে, জন্মদিন, অনুষ্ঠানের অর্ডার নেওয়া হয়</span>
+        <span class="marquee-item" aria-hidden="true">🍬 তাজা মিষ্টি প্রতিদিন সকাল ৮টা থেকে &nbsp;|&nbsp; 🚚 ঢাকার মধ্যে ডেলিভারি দেওয়া হয় &nbsp;|&nbsp; 📦 অর্ডার করুন: WhatsApp @Mishtora24BD &nbsp;|&nbsp; ⭐ বিয়ে, জন্মদিন, অনুষ্ঠানের অর্ডার নেওয়া হয়</span>
+      </div>
+    </div>
+
+    <!-- SECTION 4 — PRODUCTS / মিষ্টির তালিকা -->
+    <section class="products section-pad" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-heading">আমাদের বিশেষ মিষ্টি</h2>
+          <p class="section-subtext">প্রতিটি মিষ্টি তৈরি হয় সেরা উপকরণে</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">🍡</div>
+            <h3 class="product-card__title">রসগোল্লা</h3>
+            <p class="product-card__desc">নরম তুলতুলে রসগোল্লা, রসে ভরপুর প্রতিটি টুকরো</p>
+            <span class="product-card__price">৳ ৮/পিস থেকে</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">🍮</div>
+            <h3 class="product-card__title">মিষ্টি দই</h3>
+            <p class="product-card__desc">ঐতিহ্যবাহী মিষ্টি দই, ঘরে তৈরি স্বাদে</p>
+            <span class="product-card__price">৳ ৬০/কাপ থেকে</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">✨</div>
+            <h3 class="product-card__title">রসমালাই</h3>
+            <p class="product-card__desc">মিষ্টি দুধে ভেজানো নরম রসমালাই</p>
+            <span class="product-card__price">৳ ১৫/পিস থেকে</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">🥣</div>
+            <h3 class="product-card__title">ছানার পায়েস</h3>
+            <p class="product-card__desc">পুরনো ঢাকার রেসিপিতে তৈরি ছানার পায়েস</p>
+            <span class="product-card__price">৳ ৮০/বাটি থেকে</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">🫐</div>
+            <h3 class="product-card__title">কালোজাম</h3>
+            <p class="product-card__desc">গাঢ় রঙের মিষ্টি, বিশেষ রেসিপিতে তৈরি</p>
+            <span class="product-card__price">৳ ১০/পিস থেকে</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__icon" aria-hidden="true">📦</div>
+            <h3 class="product-card__title">বিশেষ অর্ডার 🎉</h3>
+            <p class="product-card__desc">বিয়ে, জন্মদিন, যেকোনো অনুষ্ঠানের জন্য বিশেষ অর্ডার</p>
+            <span class="product-card__price">কথা বলুন</span>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-card-order">অর্ডার করুন</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — আমাদের গল্প (About) -->
+    <section class="about section-pad" id="about">
+      <div class="container about__grid">
+        <div class="reveal">
+          <span class="about__label">আমাদের সম্পর্কে</span>
+          <h2 class="about__heading">ঐতিহ্য থেকে জন্ম নেওয়া একটি স্বপ্নের মিষ্টির দোকান</h2>
+          <p class="about__text">
+            উত্তর বাড্ডার প্রাণকেন্দ্রে অবস্থিত মিষ্টোরা শুধু একটি মিষ্টির দোকান নয় — এটি একটি অনুভূতি। আমরা বিশ্বাস করি, প্রতিটি মিষ্টি হওয়া উচিত তাজা, পরিষ্কার এবং হৃদয় স্পর্শী। আমাদের প্রতিটি রেসিপি ঐতিহ্যবাহী বাংলার স্বাদকে আধুনিকতার ছোঁয়ায় উপস্থাপন করে।
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-badge">
+              <span class="stat-badge__num">১০০+</span>
+              <span class="stat-badge__label">প্রতিদিনের খুশি গ্রাহক</span>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge__num">২০+</span>
+              <span class="stat-badge__label">বিশেষ মিষ্টির আইটেম</span>
+            </div>
+            <div class="stat-badge">
+              <span class="stat-badge__num">১০০%</span>
+              <span class="stat-badge__label">তাজা উপকরণ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__quote-box reveal">
+          <div class="ornament-line" aria-hidden="true"><span class="ornament-diamond"></span></div>
+          <blockquote class="about__quote">“মিষ্টি শুধু খাবার নয়, এটি অনুভূতি”</blockquote>
+          <div class="ornament-line" aria-hidden="true"><span class="ornament-diamond"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — কেন মিষ্টোরা বেছে নেবেন -->
+    <section class="features section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-heading">কেন আমাদের বেছে নেবেন?</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon" aria-hidden="true">🌿</div>
+            <div>
+              <h3 class="feature-card__title">সম্পূর্ণ তাজা</h3>
+              <p class="feature-card__desc">প্রতিদিন সকালে তৈরি, কোনো প্রিজার্ভেটিভ নেই</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-card__icon" aria-hidden="true">🚚</div>
+            <div>
+              <h3 class="feature-card__title">দ্রুত ডেলিভারি</h3>
+              <p class="feature-card__desc">ঢাকার মধ্যে সময়মতো ডেলিভারি নিশ্চিত</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-card__icon" aria-hidden="true">💎</div>
+            <div>
+              <h3 class="feature-card__title">প্রিমিয়াম মান</h3>
+              <p class="feature-card__desc">সেরা উপকরণ, সেরা রেসিপি, সেরা স্বাদ</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-card__icon" aria-hidden="true">🎁</div>
+            <div>
+              <h3 class="feature-card__title">অনুষ্ঠানের অর্ডার</h3>
+              <p class="feature-card__desc">বিয়ে, জন্মদিন, কর্পোরেট গিফটিং — সবই আমরা করি</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — ORDER / যোগাযোগ করুন -->
+    <section class="order-cta section-pad" id="contact">
+      <div class="container reveal">
+        <h2 class="order-cta__heading">এখনই অর্ডার করুন</h2>
+        <p class="order-cta__subtext">WhatsApp এ মেসেজ দিন অথবা সরাসরি দোকানে আসুন</p>
+
+        <div class="order-cta__buttons">
+          <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-lg">
+            💬 WhatsApp এ অর্ডার করুন
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0+%E0%A6%AC%E0%A6%BE%E0%A6%A1%E0%A7%8D%E0%A6%A1%E0%A6%BE+%E0%A6%AE%E0%A6%BF%E0%A6%B7%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%B0%E0%A6%BE" target="_blank" rel="noopener noreferrer" class="btn-location-lg">
+            📍 দোকান খুঁজুন
+          </a>
+        </div>
+
+        <div class="order-cta__info">
+          <p>দোকান ১ ও ২, শ-৪৫, ময়নারবাগ রোড, উত্তর বাড্ডা, ঢাকা-১২১২</p>
+          <p>📞 কল ও WhatsApp: <a href="tel:+8801855891610" style="color: var(--gold-light); font-weight: 600;">01855891610</a> &nbsp;|&nbsp; ✈️ Telegram: <a href="https://t.me/ishtoraBD" target="_blank" rel="noopener noreferrer" style="color: var(--gold-light); font-weight: 600;">@ishtoraBD</a></p>
+          <p>⏰ প্রতিদিন সকাল ৮টা — রাত ১০টা</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 8 — FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#home" class="brand-logo" aria-label="মিষ্টোরা">
+            <span class="brand-logo__crown" aria-hidden="true">👑</span>
+            <span class="brand-logo__m">M</span>
+            <span class="brand-logo__en">MISHTORA</span>
+            <span class="brand-logo__bn">মিষ্টোরা</span>
+          </a>
+          <p class="footer__tagline">ঐতিহ্যের স্বাদ, আভিজাত্যের ছোঁয়া</p>
+          <div class="social-links">
+            <a href="https://facebook.com/Mishtora24BD" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16V6h-2.5C11.57 6 10 7.57 10 9.5V11H8v3h2v7h3v-7h2.5l.5-3H13v-1.5c0-.28.22-.5.5-.5z"/></svg>
+            </a>
+            <a href="https://instagram.com/Mishtora24BD" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.08c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.18-4.94-4.37-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.32-.29.49-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.15.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.69-.17 1.37z"/></svg>
+            </a>
+            <a href="https://t.me/ishtoraBD" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">দ্রুত লিঙ্ক</h3>
+          <ul class="footer__links">
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#products">পণ্য</a></li>
+            <li><a href="#about">আমাদের গল্প</a></li>
+            <li><a href="#contact">যোগাযোগ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">যোগাযোগের ঠিকানা</h3>
+          <div class="footer__contact">
+            <span>📍 উত্তর বাড্ডা, ঢাকা-১২১২</span>
+            <a href="tel:+8801855891610">📞 01855891610 (কল ও WhatsApp)</a>
+            <a href="https://t.me/ishtoraBD" target="_blank" rel="noopener noreferrer">✈️ Telegram: @ishtoraBD</a>
+            <a href="mailto:mishtorabd@gmail.com">📧 mishtorabd@gmail.com</a>
+            <span>⏰ সকাল ৮টা — রাত ১০টা</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        © 2025 Mishtora. সর্বস্বত্ব সংরক্ষিত।
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ELEMENTS -->
+  <div class="fab-stack">
+    <button type="button" class="back-to-top" id="backToTop" aria-label="উপরে যান" title="উপরে যান">↑</button>
+
+    <div class="wa-fab-wrap">
+      <span class="wa-fab-tooltip">WhatsApp এ অর্ডার করুন</span>
+      <a href="https://wa.me/8801855891610" target="_blank" rel="noopener noreferrer" class="wa-fab" aria-label="WhatsApp এ অর্ডার করুন">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.08c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.18-4.94-4.37-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.32-.29.49-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.15.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.12.07.69-.17 1.37z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const backToTop = document.getElementById('backToTop');
+
+      // Mobile menu toggle
+      hamburgerBtn.addEventListener('click', function () {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburgerBtn.classList.toggle('active', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileMenu.classList.remove('open');
+          hamburgerBtn.classList.remove('active');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Scroll shadow & back-to-top visibility
+      function onScroll() {
+        const y = window.scrollY || window.pageYOffset;
+        navbar.classList.toggle('scrolled', y > 20);
+        backToTop.classList.toggle('visible', y > 300);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Fade-in on scroll via IntersectionObserver
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('in-view'); });
+      }
+    })();
+  </script>
+</body>
+</html>
